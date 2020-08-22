@@ -13,9 +13,9 @@ let locations = [
 function initMap() {
     let sgLocation = {lat: 1.3521, lng: 103.8198}
 
-    map = new google.maps.Map(documentElementById("map"),
+    map = new google.maps.Map(document.getElementById("map"),
     {
-        center:singaporeLocation,
+        center:sgLocation,
         zoom: 10
     })
 
