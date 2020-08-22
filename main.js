@@ -13,7 +13,7 @@ let locations = [
 function initMap() {
     let sgLocation = {lat: 1.3521, lng: 103.8198}
 
-    map = new google.maps.Map($("#map"),
+    map = new google.maps.Map(documentElementById("map"),
     {
         center:singaporeLocation,
         zoom: 10
@@ -24,7 +24,8 @@ function initMap() {
     for(let i = 0; i<locations.length; i++){
         let markerPosition = {
             "lat":locations[i].lat,
-            "lng":locations[i].length
+            "lng":locations[i].lng
+        }
 
         addMarker(markerPosition, locations[i].name, map);
 
